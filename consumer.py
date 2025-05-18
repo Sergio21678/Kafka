@@ -1,6 +1,12 @@
 from kafka import KafkaConsumer
 
-consumer = KafkaConsumer('mi-topico', bootstrap_servers='localhost:9092')
+consumer = KafkaConsumer(
+    'hola-mundo',
+    bootstrap_servers='localhost:9092',
+    auto_offset_reset='earliest',
+    group_id='test-group'
+)
+
 print("Esperando mensajes...")
-for message in consumer:
-    print(f"Mensaje recibido: {message.value.decode()}")
+for mensaje in consumer:
+    print(f"Recibido: {mensaje.value.decode('utf-8')}")
