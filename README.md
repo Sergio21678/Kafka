@@ -1,5 +1,5 @@
 1 GIT CLONE 
-https://github.com/Y-ostin/kafka
+https://github.com/Sergio21678/Kafka.git
 
 2 pip install kafka-python
 3 En una terminal iniciaremos el cliente ->  python producer.py
